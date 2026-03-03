@@ -1,0 +1,46 @@
+baseURL = "https://alankyshum.github.io/blogs/"
+languageCode = "en-us"
+title = "Alan's Tech Blog"
+theme = ["github.com/adityatelange/hugo-PaperMod"]
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[params]
+  description = "Technical findings, workflows, and engineering insights"
+  author = "Alan Shum"
+  env = "production"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  displayFullLangName = true
+
+  [params.cover]
+    linkFullImages = true
+
+  [params.homeInfoParams]
+    Title = "Alan's Tech Blog"
+    Content = "Technical findings, workflows, and engineering insights"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[permalinks]
+  posts = "/posts/:slug/"
+
+[module]
+  [[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
