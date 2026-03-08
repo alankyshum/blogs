@@ -7,9 +7,9 @@ categories: ["AI-Augmented Engineering"]
 slug: "roo-code-orchestrator-token-efficiency-checklist-completion"
 draft: false
 cover:
-  image: "cover.png"
-  alt: "Cover image for Using Roo Code Orchestrator for Maximum Token Efficiency and Checklist Completion"
-  caption: "Using Roo Code Orchestrator for Maximum Token Efficiency and Checklist Completion"
+  image: ![alt text](image.png)
+  alt: ""
+  caption: ""
 ShowToc: true
 TocOpen: false
 ---
@@ -34,7 +34,7 @@ I treat the orchestrator as a PM control loop, not a magic single developer: def
 - **Effective context cap at product layer:** in practice this surfaces as an effective window commonly around ~64K-128K, even when a model's native limit may be higher.
 - **Practical implication:** context carry-over must be managed aggressively on long, multi-phase tasks.
 
-![Roo Code marketplace showing custom agent modes](roo-code-marketplace-custom-agents.png)
+![Roo Code marketplace showing custom agent modes](roo-code-orchestrator-token-efficiency-checklist-completion/roo-code-marketplace-custom-agents.png)
 
 Rejected alternatives:
 1. **One giant prompt in a single Code session** — rejected because prior outputs accumulate and increase drift/retry cost.
@@ -59,19 +59,19 @@ I used a real workflow: setting up my personal blog.
 
 **Step 1 — Seed orchestrator with the objective and constraints**
 The orchestrator session used ~34K out of 128K (including system prompts + history) because most execution context lived in delegated subtasks.
-![Orchestrator prompt showing 34k token usage out of 128k context window](orchestrator-prompt-token-usage.png)
+![Orchestrator prompt showing 34k token usage out of 128k context window](roo-code-orchestrator-token-efficiency-checklist-completion/orchestrator-prompt-token-usage.png)
 
 **Step 2 — Delegate discovery to Architect mode**
 Architect mode mapped folder structure and constraints before implementation.
-![Roo Code delegating task to Architect mode for folder structure analysis](architect-mode-folder-structure.png)
+![Roo Code delegating task to Architect mode for folder structure analysis](roo-code-orchestrator-token-efficiency-checklist-completion/architect-mode-folder-structure.png)
 
 **Step 3 — Run sequentially with checklist gating**
 Progress only advanced when each subtask met its acceptance condition.
-![Orchestrator maintaining todo list to track subtask completion](orchestrator-todo-list-tracking.png)
+![Orchestrator maintaining todo list to track subtask completion](roo-code-orchestrator-token-efficiency-checklist-completion/orchestrator-todo-list-tracking.png)
 
 **Step 4 — Close on a fully completed checklist**
 The run ended with an auditable checklist across all delegated steps.
-![Completed checklist after multiple rounds of task delegations](completed-checklist-delegations.png)
+![Completed checklist after multiple rounds of task delegations](roo-code-orchestrator-token-efficiency-checklist-completion/completed-checklist-delegations.png)
 
 **Task Timeline — reported by Roo Code**
 
